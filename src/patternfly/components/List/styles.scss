@@ -5,101 +5,61 @@
 
 // The value of component scoped variables is always defined by a global variable:
 :root {
-  // Example block variable
-  --pf-c-list--Color: var(--pf-global--dark--Color);
-
-  // Example element variable
-  --pf-c-list__title--FontSize: var($pf-global--secondary-title--FontSize);
-
-  // Example modifier variable
-  --pf-c-list--is-danger--BackgroundColor: var(--pf-global--danger-color);
+  //
+  --pf-c-list-item--BackgroundColor: var(--pf-global--light--BackgroundColor);
+  --pf-c-list-item--BoxShadow: var(--pf-global--shadow--md-bottom--BoxShadow);
   //
   --pf-c-list-item__header--BorderTopWidth: var(--pf-global--BorderWidth);
   --pf-c-list-item__header--BorderTopColor: var(--pf-global--light--BorderColor);
+  --pf-c-list-item__header--Padding: var(--pf-global--spacer--sm, 24px);
   //
-  --pf-c-list-item__body--BorderTopWidth: var(--pf-global--BorderWidth);
-  --pf-c-list-item__body--BorderTopColor: var(--pf-global--light--BorderColor);
+  --pf-c-list-item__body--BorderTopWidth: var(--pf-global--BorderWidth, 1px);
+  --pf-c-list-item__body--BorderTopColor: var(--pf-global--light--BorderColor, #e2e2e2);
+  --pf-c-list-item__body--Padding: var(--pf-global--spacer--sm, 24px);
   //
-  --pf-c-list-item--is-expanded--BorderLeftWidth: var(--pf-global--md--BorderWidth);
-  --pf-c-list-item--is-expanded--BorderLeftColor: var(--pf-global--active--Color);
+  --pf-c-list-item--is-expanded--BorderLeftWidth: var(--pf-global--md--BorderWidth, 3px);
+  --pf-c-list-item--is-expanded--BorderLeftColor: var(--pf-global--active--Color, #2e30f7);
   //
-  --pf-c-list-item--is-expanded--BoxShadowLeft: var(--pf-global--shadow--md-left--BoxShadow);
-  --pf-c-list-item--is-expanded--BoxShadowTop: var(--pf-global--shadow--sm-top--BoxShadow);
-  --pf-c-list-item--is-expanded--BoxShadowBottom: var(--pf-global--shadow--lg-bottom--BoxShadow);
-  --pf-c-list-item--is-expanded--BoxShadowRight: var(--pf-global--shadow--md-right--BoxShadow);
-}
-
-.pf-c-list {
-  color: var(--pf-c-list--Color, #292e34);
-
-  // Element
-  &__title {
-    font-size: var(--pf-c-list_title--FontSize, 2rem);
-  }
-
-  // Modifier
-  &.is-danger {
-    background-color: var(--pf-c-list--is-danger--BackgroundColor, #c00);
-  }
+  --pf-c-list-item--is-expanded--BoxShadow: var(--pf-global--shadow--md-bottom--BoxShadow);
+  //
+  --pf-l-split--Gutter: var(--pf-global--spacer--sm, 24px);
 }
 
 .pf-c-list-item {
   color: var(--pf-c-list-item--Color, #292e34);
-  // box-shadow: var(--pf-global--shadow--sm-right--BoxShadow), var(--pf-global--shadow--sm-left--BoxShadow);
-  background-color: var(--pf-global--light--BackgroundColor);
+  background-color: var(--pf-c-list-item--BackgroundColor);
   border-top: var(--pf-c-list-item__header--BorderTopWidth, 1px) solid var(--pf-c-list-item__header--BorderTopColor, #e2e2e2);
-  box-shadow: var(--pf-global--shadow--md-bottom--BoxShadow);
+  box-shadow: var(--pf-c-list-item--BoxShadow);
 
   &:first-child {
-    // border: #000 1px solid;
     border-top: none;
-    // box-shadow: var(--pf-global--shadow--sm-right--BoxShadow), var(--pf-global--shadow--sm-top--BoxShadow), var(--pf-global--shadow--sm-left--BoxShadow);
-  }
-
-  &:last-child {
-    //box-shadow: var(--pf-global--shadow--sm-right--BoxShadow), var(--pf-global--shadow--md-bottom--BoxShadow), var(--pf-global--shadow--sm-left--BoxShadow);
-  }
-
-  &:first-child:last-child {
-    //box-shadow: var(--pf-global--shadow--sm-right--BoxShadow), var(--pf-global--shadow--md-bottom--BoxShadow), var(--pf-global--shadow--sm-top--BoxShadow), var(--pf-global--shadow--sm-left--BoxShadow);
-  }
-
-  // Element
-  &__title {
-    font-size: var(--pf-c-list-item__title--FontSize, 2rem);
   }
 
   &__header {
-    // border-top: var(--pf-c-list-item__header--BorderTopWidth, 1px) solid var(--pf-c-list-item__header--BorderTopColor, #e2e2e2);
+    padding: var(--pf-c-list-item__header--Padding);
   }
 
   &__body {
-    padding: var(--pf-global--spacer--sm);
-    border-top: var(--pf-c-list-item__body--BorderTopWidth, 1px) solid var(--pf-c-list-item__body--BorderTopColor, #e2e2e2);
+    padding: var(--pf-c-list-item__body--Padding);
+    border-top: var(--pf-c-list-item__body--BorderTopWidth) solid var(--pf-c-list-item__body--BorderTopColor);
   }
-
-  // Modifier
-  // &.is-danger {
-  //  background-color: var(--pf-c-list-item--is-danger--BackgroundColor, #c00);
-  // }
 
   // Modifier
   &.pf-is-expanded,
   &.pf-is-expanded:first-child,
   &.pf-is-expanded:last-child {
     position: relative;
-    border-left: var(--pf-c-list-item--is-expanded--BorderLeftWidth, 3px) solid var(--pf-c-list-item--is-expanded--BorderLeftColor, #2e30f7);
-    // height: 500px;
-    // box-shadow: var(--pf-c-list-item--is-expanded--BoxShadowLeft), var(--pf-c-list-item--is-expanded--BoxShadowTop), var(--pf-c-list-item--is-expanded--BoxShadowBottom), var(--pf-c-list-item--is-expanded--BoxShadowRight);
-    //box-shadow: var(--pf-global--shadow--md-right--BoxShadow);
-    // box-shadow: var(--pf-global--shadow--md-bottom--BoxShadow);
-    // box-shadow: var(--pf-global--shadow--sm-top--BoxShadow);
-    // box-shadow: var(--pf-global--shadow--md-right--BoxShadow), var(--pf-global--shadow--md-bottom--BoxShadow), var(--pf-global--shadow--md-top--BoxShadow), var(--pf-global--shadow--md-left--BoxShadow);
-    box-shadow: var(--pf-global--shadow--lg-bottom--BoxShadow);
+    border-left: var(--pf-c-list-item--is-expanded--BorderLeftWidth) solid var(--pf-c-list-item--is-expanded--BorderLeftColor);
+    box-shadow: var(--pf-c-list-item--is-expanded--BoxShadow);
   }
 
   .pf-l-split__primary,
   .pf-l-split__secondary {
-    padding: var(--pf-global--spacer--sm);
+    margin-right: var(--pf-l-split--Gutter);
+  }
+
+  .pf-l-split__primary:last-child,
+  .pf-l-split__secondary:last-child {
+    margin-right: 0;
   }
 }
