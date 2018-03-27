@@ -72,8 +72,8 @@ $pf-global--shadow--sm--BoxShadow:  0  pf-size-prem(1)  pf-size-prem(2) 0 rgba($
 $pf-global--shadow--md--BoxShadow:  0  pf-size-prem(2)  pf-size-prem(1) pf-size-prem(1) rgba($pf-color-black-1000, .12), 0  pf-size-prem(4)  pf-size-prem(11) pf-size-prem(6) rgba($pf-color-black-1000, .05) !default;
 $pf-global--shadow--lg--BoxShadow:  0  pf-size-prem(3)  pf-size-prem(7) pf-size-prem(3) rgba($pf-color-black-1000, .13), 0  pf-size-prem(11)  pf-size-prem(24) pf-size-prem(16) rgba($pf-color-black-1000, .12) !default;
 
-$pf-global--shadow--sm-right--BoxShadow:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
-$pf-global--shadow--sm-left--BoxShadow:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
+$pf-global--shadow--sm-right--BoxShadow:  pf-size-prem(4)  0  pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-red-300, .99) !default;
+$pf-global--shadow--sm-left--BoxShadow:   pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-red-300, .99) !default;
 $pf-global--shadow--sm-bottom--BoxShadow: 0 pf-size-prem(4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 $pf-global--shadow--sm-top--BoxShadow:    0 pf-size-prem(-4) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .12) !default;
 $pf-global--shadow--md-right--BoxShadow:  pf-size-prem(5) 0 pf-size-prem(10) pf-size-prem(-4) rgba($pf-color-black-1000, .25) !default;

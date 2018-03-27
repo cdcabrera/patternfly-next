@@ -17,12 +17,64 @@ export default () => {
           <ListItem showToggle={true} primary={primary} secondary={secondary}>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </ListItem>
+          <ListItem showToggle={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+        </List>
+      </Example>
+
+      <Example heading="List with toggle">
+        <List>
+          <ListItem showToggle={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+          <ListItem showToggle={true} isExpanded={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+          <ListItem showToggle={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+        </List>
+      </Example>
+
+      <Example heading="List with toggle">
+        <List>
+          <ListItem showToggle={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+          <ListItem showToggle={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+          <ListItem showToggle={true} isExpanded={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+        </List>
+      </Example>
+
+      <Example heading="List with toggle">
+        <List>
+          <ListItem showToggle={true} isExpanded={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+          <ListItem showToggle={true} isExpanded={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
+          <ListItem showToggle={true} primary={primary} secondary={secondary}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </ListItem>
         </List>
       </Example>
 
       <Example heading="List without toggle">
         <List>
           <ListItem showToggle={false} primary={primary} secondary={secondary}/>
+          <ListItem showToggle={false} primary={primary} secondary={secondary}/>
+          <ListItem showToggle={false} primary={primary} secondary={secondary}/>
+        </List>
+      </Example>
+
+      <Example heading="List without toggle">
+        <List>
           <ListItem showToggle={false} primary={primary} secondary={secondary}/>
         </List>
       </Example>

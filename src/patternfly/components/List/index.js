@@ -14,9 +14,10 @@ export const Docs = docs;
  */
 export const ListItem = ({showToggle = false, isExpanded = false, primary, secondary, children}) => {
   return (
-    <div className={`pf-c-list-item ${showToggle && 'pf-is-expanded'}`}>
+    <div className={`pf-c-list-item ${isExpanded && 'pf-is-expanded'}`}>
       <div className="pf-c-list-item__header">
         <div className="pf-l-split">
+
           {showToggle && (
             <div className="pf-l-split__secondary">
               <button className="" aria-label="Chevron down">
@@ -24,6 +25,7 @@ export const ListItem = ({showToggle = false, isExpanded = false, primary, secon
               </button>
             </div>
           )}
+
           <div className="pf-l-split__primary">{primary}</div>
           <div className="pf-l-split__secondary">{secondary}</div>
         </div>
